@@ -1,19 +1,23 @@
 # Line Follower 1.0
 
-![Arduino](https://img.shields.io/badge/Arduino-00979D?logo=arduino&logoColor=white) ![C/C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?logo=arduino&logoColor=white) ![C/C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white) ![KiCad](https://img.shields.io/badge/KiCad-FCA326?logo=kicad&logoColor=white) ![Gerber](https://img.shields.io/badge/Gerber-FF6A00?logo=gerber&logoColor=white)
 
-Minimal — lo necesario para usar el proyecto:
 
-- Requisitos: `Arduino IDE` o `PlatformIO`; placa Arduino (Uno/Nano/Pro Mini); librerías en `CODE/Libreria/`.
-- Abrir ejemplo: `CODE/Main Code/<ejemplo>/*.ino` → seleccionar placa y puerto → Subir.
-- Gerbers: `Archivos Gerber PCB/gerbers/` (abrir en KiCad o visor).
+Robot seguidor de línea — código Arduino, esquemas KiCad y Gerbers listos para fabricación.
 
-Comando rápido (opcional):
-```bash
-arduino-cli compile --fqbn <package:arch:board> /ruta/al/proyecto
-arduino-cli upload -p COM3 --fqbn <package:arch:board> /ruta/al/proyecto
-```
+Qué es:
+- Código, PCB y archivos Gerber para un robot seguidor de línea (ejemplos en `CODE/Main Code/`).
 
-Archivos clave: `CODE/`, `ESQUEMA Y PCB/`, `Archivos Gerber PCB/gerbers/`.
+Cómo reproducir (resumen):
+1. Materiales: placa Arduino (Uno/Nano/Pro Mini), motores, driver de motores, sensores IR, batería, cables, PCB o protoboard.
+2. Abrir el ejemplo: `CODE/Main Code/<ejemplo>/*.ino`.
+3. Instalar librerías desde `CODE/Libreria/` y seleccionar la `board` correcta en Arduino IDE/PlatformIO.
+4. Compilar y subir al microcontrolador.
+5. Montar la electrónica según `ESQUEMA Y PCB/` y/o fabricar la PCB usando `Archivos Gerber PCB/gerbers/` (enviar a fabricante).
 
-¿Así está bien o lo dejo aún más corto? 
+Notas importantes:
+- Verificar voltaje y polaridad de la batería.
+- Calibrar sensores antes de pruebas.
+- Revisar conexiones del driver de motores para evitar cortocircuitos.
+
+
