@@ -15,9 +15,33 @@ Cómo reproducir (resumen):
 4. Compilar y subir al microcontrolador.
 5. Montar la electrónica según `ESQUEMA Y PCB/` y/o fabricar la PCB usando `Archivos Gerber PCB/gerbers/` (enviar a fabricante).
 
+
 Notas importantes:
 - Verificar voltaje y polaridad de la batería.
 - Calibrar sensores antes de pruebas.
 - Revisar conexiones del driver de motores para evitar cortocircuitos.
+
+Estructura del proyecto (estilo `eza --tree`):
+```
+.
+├─ CODE/
+│  ├─ Libreria/
+│  └─ Main Code/
+│     ├─ Codigo Carro V1.0/
+│     │  └─ Programacion.ino
+│     ├─ Ejemplo de Lectura y Posicion/
+│     │  └─ LECTURA_Y_POSICION.ino
+│     └─ Ejemplo de Motores y Rotacion/
+│        └─ Motores.ino
+├─ ESQUEMA Y PCB/
+│  ├─ asda.kicad_pcb
+│  └─ asda.kicad_sch
+├─ Archivos Gerber PCB/
+│  └─ gerbers/
+│     ├─ asda-F_Cu.gbr
+│     └─ asda-job.gbrjob
+├─ GErber con Turbina/
+└─ README.md
+```
 
 
